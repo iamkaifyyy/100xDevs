@@ -59,3 +59,5 @@ const data = read.readFileSync('b.txt','utf-8');
 console.log(data);
 
 // require is to use external module by importing it..
+
+
