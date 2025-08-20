@@ -39,4 +39,9 @@ console.log(ans2);
  const contents = fs.readFileSync("a.txt", "utf-8");
  console.log(contents);
 
- 
+ var user = {
+    name: "kaifyyy",
+    age: 21
+ }
+
+ console.log(user.age);
