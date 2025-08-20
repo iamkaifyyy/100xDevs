@@ -64,4 +64,53 @@ console.log(data);
 // use readFile function instead of readFileSync that use Synchoronous execution...
 
 
-/// 
+/// FUNCTIONAL ARGUMENTS
+
+function sum(a, b){
+    return a + b;
+}
+
+function subtract(a, b){
+    return a - b;
+}
+
+function multiply(a, b){
+    return a * b;
+}
+
+function divide(a, b){
+    return a / b;
+}
+
+
+// passing a function as an argument to another function  
+
+function sum(a, b){
+    return a + b;
+}
+
+function subtract(a, b){
+    return a - b;
+}
+
+function multiply(a, b){
+    return a * b;
+}
+
+function divide(a, b){
+    return a / b;
+}
+
+function doOperation(a, b, op){
+    return op(a, b)
+}
+
+console.log(doOperationoOperation(1, 2 , sum));
+
+
+
+// ********* Asynchronous Code, CALLBACKS ************
+
+
+
+
