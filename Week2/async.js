@@ -13,6 +13,26 @@
 // 1 => n
 
 
+/*
 function sum(n){
-
+    let ans = 0;
+    for(let i =1; i <= n ; i++){
+        ans = ans + i;
+    }
+    return 
 }
+
+const answer = sum(10);
+console.log(answer);
+
+const ans1 = sum(100);
+console.log(ans1);
+const ans2 = sum(1000);
+console.log(ans2);
+
+*/
+
+// I/0 heavy Operations
+
+
+ 
