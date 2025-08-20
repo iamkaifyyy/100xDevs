@@ -53,7 +53,8 @@ console.log(ans2);
 
 // fs is external library used for operations on File System
 
+const read = require("fs");
 
+const data = read.readFileSync('b.txt','utf-8');
+console.log(data);
 
-
- 
