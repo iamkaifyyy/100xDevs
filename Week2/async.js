@@ -61,3 +61,7 @@ console.log(data);
 // require is to use external module by importing it..
 
 
+// use readFile function instead of readFileSync that use Synchoronous execution...
+
+
+/// 
