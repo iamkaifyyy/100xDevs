@@ -13,7 +13,7 @@
 // 1 => n
 
 
-/*
+
 function sum(n){
     let ans = 0;
     for(let i =1; i <= n ; i++){
@@ -30,12 +30,12 @@ console.log(ans1);
 const ans2 = sum(1000);
 console.log(ans2);
 
-*/
+
 
 // I/0 heavy Operationsss
 
 
-/*
+
  const fs = require("fs")
 
  const contents = fs.readFileSync("a.txt", "utf-8");
@@ -48,9 +48,12 @@ console.log(ans2);
 
  console.log(user.age);
 
- */
 
- 
+
+
+// fs is external library used for operations on File System
+
+
 
 
  
