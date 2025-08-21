@@ -112,5 +112,15 @@ console.log(doOperationoOperation(1, 2 , sum));
 // ********* Asynchronous Code, CALLBACKS ************
 
 
+const fs = require('fs');
 
+function read(err, data){
+    console.log(data);
+}
+
+const contents1 = fs.readFile("a.txt", "utf-8", read());
+console.log(contents1);
+
+
+const contents2 = fs.readFile("b.txt", "utf-8", )
 
