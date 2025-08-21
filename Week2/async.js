@@ -122,5 +122,25 @@ const contents1 = fs.readFile("a.txt", "utf-8", read());
 console.log(contents1);
 
 
-const contents2 = fs.readFile("b.txt", "utf-8", )
+const contents2 = fs.readFile("b.txt", "utf-8",);
+console.log("done");
+
+
+// *** Callbacks ***
+
+
+const fs = require('fs');
+
+function print(err, data){
+    console.log(data);
+}
+
+fs.readFile("a.txt", "utf-8", print);
+
+fs.readFile("b.txt", "utf-8", print);
+
+console.log("Done!");
+
+
+
 
