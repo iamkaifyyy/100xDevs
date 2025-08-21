@@ -1,149 +1,154 @@
- // this is for async.js
+//  // this is for async.js
 
- // normal function in Js
+//  // normal function in Js
 
- function sum(a, b){
-    return a+b;
- }
+//  function sum(a, b){
+//     return a+b;
+//  }
 
- let ans = sum(2, 3)
- console.log(ans);
+//  let ans = sum(2, 3)
+//  console.log(ans);
 
-// find sum of 1 to number
-// 1 => n
+// // find sum of 1 to number
+// // 1 => n
 
+// function sum(n){
+//     let ans = 0;
+//     for(let i =1; i <= n ; i++){
+//         ans = ans + i;
+//     }
+//     return
+// }
 
+// const answer = sum(10);
+// console.log(answer);
 
-function sum(n){
-    let ans = 0;
-    for(let i =1; i <= n ; i++){
-        ans = ans + i;
-    }
-    return 
-}
+// const ans1 = sum(100);
+// console.log(ans1);
+// const ans2 = sum(1000);
+// console.log(ans2);
 
-const answer = sum(10);
-console.log(answer);
+// // I/0 heavy Operationsss
 
-const ans1 = sum(100);
-console.log(ans1);
-const ans2 = sum(1000);
-console.log(ans2);
+//  const contents = fs.readFileSync("a.txt", "utf-8");
+//  console.log(contents);
 
+//  var user = {
+//     name: "kaifyyy",
+//     age: 21
+//  }
 
+//  console.log(user.age);
 
-// I/0 heavy Operationsss
+// // fs is external library used for operations on File System
 
+// const data = read.readFileSync('b.txt','utf-8');
+// console.log(data);
 
+// // require is to use external module by importing it..
 
- const fs = require("fs")
+// // use readFile function instead of readFileSync that use Synchoronous execution...
 
- const contents = fs.readFileSync("a.txt", "utf-8");
- console.log(contents);
+// /// FUNCTIONAL ARGUMENTS
 
- var user = {
-    name: "kaifyyy",
-    age: 21
- }
+// function sum(a, b){
+//     return a + b;
+// }
 
- console.log(user.age);
+// function subtract(a, b){
+//     return a - b;
+// }
 
+// function multiply(a, b){
+//     return a * b;
+// }
 
+// function divide(a, b){
+//     return a / b;
+// }
 
+// // passing a function as an argument to another function
 
-// fs is external library used for operations on File System
+// function sum(a, b){
+//     return a + b;
+// }
 
-const read = require("fs");
+// function subtract(a, b){
+//     return a - b;
+// }
 
-const data = read.readFileSync('b.txt','utf-8');
-console.log(data);
+// function multiply(a, b){
+//     return a * b;
+// }
 
-// require is to use external module by importing it..
+// function divide(a, b){
+//     return a / b;
+// }
 
+// function doOperation(a, b, op){
+//     return op(a, b)
+// }
 
-// use readFile function instead of readFileSync that use Synchoronous execution...
+// console.log(doOperationoOperation(1, 2 , sum));
 
+// // ********* Asynchronous Code, CALLBACKS ************
 
-/// FUNCTIONAL ARGUMENTS
+// const fs = require('fs');
 
-function sum(a, b){
-    return a + b;
-}
+// function read(err, data){
+//     console.log(data);
+// }
 
-function subtract(a, b){
-    return a - b;
-}
+// const contents1 = fs.readFile("a.txt", "utf-8", read());
+// console.log(contents1);
 
-function multiply(a, b){
-    return a * b;
-}
-
-function divide(a, b){
-    return a / b;
-}
-
-
-// passing a function as an argument to another function  
-
-function sum(a, b){
-    return a + b;
-}
-
-function subtract(a, b){
-    return a - b;
-}
-
-function multiply(a, b){
-    return a * b;
-}
-
-function divide(a, b){
-    return a / b;
-}
-
-function doOperation(a, b, op){
-    return op(a, b)
-}
-
-console.log(doOperationoOperation(1, 2 , sum));
-
-
-
-// ********* Asynchronous Code, CALLBACKS ************
-
-
-const fs = require('fs');
-
-function read(err, data){
-    console.log(data);
-}
-
-const contents1 = fs.readFile("a.txt", "utf-8", read());
-console.log(contents1);
-
-
-const contents2 = fs.readFile("b.txt", "utf-8",);
-console.log("done");
-
+// const contents2 = fs.readFile("b.txt", "utf-8",);
+// console.log("done");
 
 // *** Callbacks ***
 
+// const fs = require("fs");
 
-const fs = require('fs');
+// function print(err, data) {
+//   if(err){
+//     console.log("file not found");
+//   } else {
+//     console.log(data);
+//   }
+// }
 
-function print(err, data){
-    console.log(data);
+// fs.readFile("a.txt", "utf-8", print);
+
+// fs.readFile("b.txt", "utf-8", print);
+
+// setTimeout(() => {
+//   console.log("hello");
+// }, 1000);
+
+// console.log("Done!");
+
+// Initial callbacks
+
+
+function timeout(){
+    console.log("setTimeout runs");
 }
 
-fs.readFile("a.txt", "utf-8", print);
+console.log("done")
 
-fs.readFile("b.txt", "utf-8", print);
+setTimeout(timeout, 10000);
 
+console.log("welcome to loupe");
 
-function readFile(filePath, encoding, op){
-    op("error", "hi there")
+let c = 0;
+
+for(let i = 0; i<100000000; i++){
+    c = c + 1;
+    // return c;
 }
 
+console.log(c);
 
 
 
+console.log("expensive operation done");
