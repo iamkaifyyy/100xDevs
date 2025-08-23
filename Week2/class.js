@@ -38,7 +38,9 @@ class Rectangle {
     }
 }
 
- const rect = new Rectangle(2, 4) 
+const rect = new Rectangle(2, 4) 
 const area = rect.area();
 rect.paint();
 console.log(area);
+
+
