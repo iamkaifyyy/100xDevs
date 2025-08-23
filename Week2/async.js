@@ -149,6 +149,18 @@ for(let i = 0; i<100000000; i++){
 
 console.log(c);
 
-
-
 console.log("expensive operation done");
+// how to make setTimeout synchornous!
+
+
+function setTimeoutSync(timeout){
+    let startTime = new Date();
+    while(1){
+        let currentTime = new Date();
+        if(currentTime.getTime() - startTime.getTime() > timeout);
+    }
+}
+
+setTimeoutSync(1000);
+
+console.log("hi there");
