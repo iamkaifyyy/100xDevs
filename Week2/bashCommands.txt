@@ -12,3 +12,7 @@ bash Commands
 10- nvm
 11- npm
 12- node
+13- grep 
+14- clear
+
+// all these are bash commands
