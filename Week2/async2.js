@@ -104,4 +104,35 @@ async function solve(){
 
 solve();
 
-console.log("after solve function")
+console.log("after solve function ")
+
+
+
+
+
+
+
+// Note : to understand this async code 
+
+const fs = require('fs');
+
+function readFileAsync() {
+    return new Promise(function(resolve, reject){
+        fs.readFile("asdf.txt", "utf-8", function(err, data){
+            // if err 
+            if (err){
+                reject("file not found");
+            } else {
+                resolve(data);
+            }
+        })
+    })
+}
+
+
+readFileAsync().then(function(x){
+    console.log("files have been read" + x)
+})
+.catch(function(e){
+    console.log(e);
+})
