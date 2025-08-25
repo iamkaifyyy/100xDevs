@@ -1,1 +1,3 @@
-console.log("kaifuuuuu")
+const chalk = require('chalk');
+
+console.log(chalk);
