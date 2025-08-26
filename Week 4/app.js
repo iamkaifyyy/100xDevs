@@ -1,16 +1,17 @@
-import { Command } from "commander";   // Capital "C" in Command
+const fs = require('fs');
+const { totalmem } = require('os');
 
-const program = new Command();
+function main(filename){
+  fs.readFile(filename, "utf-8", function(err, data){
+    let total = 0;
+    for (let i = 0; i < data.length; i++) {
+      if(data[i] === " "){
+        total++;
+      }
+    }
+    console.log(`total no of words : ${total + 1}`);
+  })
+}
 
-program
-  .name("kaifyyy-cli")                // CLI name
-  .description("first cli tool")
-  .version("1.0.0");
+main("a.txt");
 
-program
-  .option("-n, --name <string>", "Your name")   // space between flag & <string>
-  .action((options) => {
-    console.log(`Hello, ${options.name || "world"}!`);  // backticks for template string
-  });
-
-program.parse();
