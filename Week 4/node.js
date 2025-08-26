@@ -1,5 +1,4 @@
-const path = require("path");
+import chalk from "chalk";
 
-console.log(__dirname);
-console.log(__dirname + "/node.js");
-console.log(path.join());
+console.log(chalk.red("hi there"));
+
