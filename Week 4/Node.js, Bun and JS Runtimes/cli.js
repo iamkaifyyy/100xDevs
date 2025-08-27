@@ -1,3 +1,9 @@
+
+// creating our very own CLI 
+// Assignment - 1
+
+
+
 const fs = require('fs');
 const { totalmem } = require('os');
 
@@ -12,6 +18,6 @@ function main(filename){
     console.log(`total no of words : ${total + 1}`);
   })
 }
-
+ 
 main("a.txt");
 
