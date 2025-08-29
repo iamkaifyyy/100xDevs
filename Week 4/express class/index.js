@@ -3,7 +3,7 @@
 const express = require("express");
 const app = express();
 
-console.dir(app);
+console.log(app);
 
 app.get("/", function(req, res){
     res.send();
