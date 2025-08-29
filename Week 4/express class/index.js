@@ -1,15 +1,18 @@
-const express = require('express');
+// this file created for tutorial of express.js
 
+const express = require("express");
 const app = express();
 
-
-
+console.dir(app);
 
 app.get("/", function(req, res){
-
     res.send();
 })
 
 
-app.listen(3000);
- 
+
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`app listening on port ${port}`);
+})
