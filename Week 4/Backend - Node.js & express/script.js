@@ -10,6 +10,5 @@ app.get("/home", function(req, res){
     res.send('Home Page is this');
 })
 
-
-
+  
 app.listen(3000);
