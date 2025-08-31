@@ -5,8 +5,7 @@ const app = express();
 // construction of middleware
 
 app.use(function(req, res, next){
-
-    
+    console.log(req); 
 });
 
 
