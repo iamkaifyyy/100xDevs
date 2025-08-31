@@ -1,6 +1,16 @@
 const express = require('express')
 const app = express();
 
+
+// construction of middleware
+
+app.use(function(req, res, next){
+
+    
+});
+
+
+
 app.get("/", function(req, res){
     res.send('hello world');
 })
