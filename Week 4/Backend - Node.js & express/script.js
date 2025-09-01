@@ -6,11 +6,13 @@ const app = express();
 
 app.use(function(req, res, next){
     console.log(req); 
+
+    next();
 });
 
 
 
-
+  
 // app.get is used to create Routes
  
 
