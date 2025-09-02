@@ -1,29 +1,20 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 
+app.set("view engine", "ejs");
 
-// construction of middleware
-
-app.use(function(req, res, next){
-    console.log(req); 
-
-    next();
-});
-
-
-
-  
-// app.get is used to create Routes
- 
 
 app.get("/", function(req, res){
-    res.send('hello world');
-})
+    res.render("index");
+});
 
+app.get("/profile", function (req, res){
+    res.send("hello from profile");
+});
 
-app.get("/home", function(req, res){
-    res.send('Home Page is this');
-})
+app.get("/profile/bond", function(req, res){
+    res.send("hello from profile");
+});
 
-  
 app.listen(3000);
+
