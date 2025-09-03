@@ -18,7 +18,14 @@ app.get("/", function(req, res){
 });
 
 app.post("/", function(req, res){
-    
+
+})
+
+
+app.put("/", function(req, res){
+    for(let i = 0; i<users[0].kidneys.length; i++){
+        
+    }
 })
 
 app.listen(3000);
