@@ -26,7 +26,7 @@ app.get("/multiply", function(req, res){
 
 app.get("/divide", function(req, res){
     const a = req.query.a;
-    const b = req.query.b;
+    const b = req.query.fb;
 
     res.json({
         ans: a / b
