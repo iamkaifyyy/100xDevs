@@ -6,15 +6,19 @@ const app = express();
 
 let requestCount = 0;
 
-app.get("/sum", function(req, res){
-
+function requestIncreaser() {
     requestCount = requestCount + 1;
     console.log("total no of requests = " + requestCount);
+}
 
-    console.log("total no of requests = " + requestCount)
+app.get("/sum", function(req, res){
 
-    const a = req.query.a;
-    const b = req.query.b;
+
+
+    // console.log("total no of requests = " + requestCount)
+
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
 
     res.json({
         ans: a + b
@@ -23,8 +27,10 @@ app.get("/sum", function(req, res){
 
 
 app.get("/multiply", function(req, res){
-    const a = req.query.a;
-    const b = req.query.b;
+
+
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
 
     res.json({
         ans: a + b
