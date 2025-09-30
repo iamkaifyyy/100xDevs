@@ -9,6 +9,9 @@ axios.get('https://jsonplaceholder.typicode.com/posts')
     console.error(error);
   });
 
+
+
+  
 // POST request
 axios.post('https://jsonplaceholder.typicode.com/posts', {
     title: 'Hello',
