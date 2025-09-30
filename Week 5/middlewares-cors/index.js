@@ -13,8 +13,7 @@ function requestIncreaser() {
 
 app.get("/sum", function(req, res){
 
-
-
+    requestIncreaser();
     // console.log("total no of requests = " + requestCount)
 
     const a = parseInt(req.query.a);
@@ -28,6 +27,7 @@ app.get("/sum", function(req, res){
 
 app.get("/multiply", function(req, res){
 
+    requestIncreaser();f
 
     const a = parseInt(req.query.a);
     const b = parseInt(req.query.b);
