@@ -1,33 +1,39 @@
-const express = require('express')
-const app = express()
+const express = require("express");
 
-let requestCount = 0;
+const app = express();
 
-function requestIncreaser(){
-  requestCount = requestCount + 1;
-  console.log("total no of requests = " + requestCount);
-  req.requestCount = requestCount;
-}
+app.get("/sum", function(req, res) {
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
 
-app.get('/sum', (req, res) => {
-  requestIncreaser();
-  const a = parseInt(req.query.a);
-  const b = parseInt(req.query.b);
-  
-  res.json({
-    ans: a + b
-  })
-})
+    res.json({
+        ans: a + b
+    })
+});
 
-app.get('/multiply', (req, res) => {
-  requestIncreaser();
-  const a = parseInt(req.query.a);
-  const b = parseInt(req.query.b);
-  
-  res.json({
-    ans: a * b
-  })
-})
+app.get("/multiply", function(req, res) {
+    const a = req.query.a;
+    const b = req.query.b;
+    res.json({
+        ans: a * b
+    })
+});
 
+app.get("/divide", function(req, res) {
+    const a = req.query.a;
+    const b = req.query.b;
+    res.json({
+        ans: a / b
+    })
 
-app.listen(3000)
+});
+
+app.get("/subtract", function(req, res) {
+    const a = parseInt(req.query.a);
+    const b = parseInt(req.query.b);
+    res.json({
+        ans: a - b
+    })
+});
+
+app.listen(3000);
