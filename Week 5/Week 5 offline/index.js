@@ -1,17 +1,15 @@
 // map, filter, arrow functions
 
-function sum(a, b){
-    return a + b;
+const input = [1, 2, 3, 4, 5];
 
+// other Solution using map 
+
+function transform(){
+    return i * 2;
 }
 
-const sum = (a, b) =>{
-    return a + b;
-}
-
-app.get("/", (req, res){
-    
-})
-
-const ans = sum(1, 2);
+const ans = input.map(transform);
 console.log(ans);
+
+
+ 
