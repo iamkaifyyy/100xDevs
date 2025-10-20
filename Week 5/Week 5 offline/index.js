@@ -1,11 +1,22 @@
-// filter functions
+// map function 
 
-const arr = [1, 2, 3, 4, 5, 6];
 
-function filteringLogic(){
-    const num = arr[i] * 2;
-    return num;
+const numbers = [1, 2, 3, 4, 5];
+
+function square(numbers) {
+    return numbers * numbers;
 }
 
+const squaredNumbers = Map(numbers, sqaure);
 
-Map(arr, filteringLogic)
+// filtering 
+
+const arr = [1, 2, 3, 4, 5];
+
+for(let i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+        newArr.push(arr[i]);
+    }
+}
+
+console.log(newArr);
