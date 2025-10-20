@@ -20,3 +20,27 @@ for(let i = 0; i < arr.length; i++){
 }
 
 console.log(newArr); 
+
+
+// filtering logic 
+
+function filteringLogic(n){
+    if (n%2 === 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const ans = arr.filter(filterLogic)
+
+
+// assignment 
+
+const map = (arr, fn) => {
+    const transformedArr = [];
+    for (let i = 0 ; i< arr.length; i++){
+        transformedArr.push(fn(arr[i]));
+    }
+    return transformedArr;
+}
