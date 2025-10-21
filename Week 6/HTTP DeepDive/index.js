@@ -41,7 +41,33 @@ app.post("/signup", function(req, res){
 
 app.post("/signin", function(req, res){
    
+    const username = req.body.username;
+    const password = req.body.password;
+    
+    let foundUser = null;
+
+    for(let i = 0; i<users.length; i++){
+        if(users[i].username == username && users[i].password == password){
+            foundUser = users[i]
+        }
+    }
+
+    if(foundUser){
+        const token = generateToken();
+        foundUser.token = token; 
+
+        res.json({
+            message: token
+        });
+
+    } else {
+        res.status(403).send({
+            message: " "
+        })
+    }
 })
+
+
 
 app.listen(3000); // tht the http server is listening on port 3000
 
