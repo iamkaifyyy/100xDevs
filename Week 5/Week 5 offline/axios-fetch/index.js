@@ -43,4 +43,20 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
     })
 
 
-    
+// using fetch with Async function
+
+async function getData() {
+    try{
+        const response = await fetch ("https://jsonplaceholder.typicode.com/posts/1")
+        const data = await response.json();
+        console.log(data)}
+        catch(error){
+            console.error("Error", error);
+        }
+}
+
+getData();
+
+
+// using Axios as with Async-Await Syntax
+
