@@ -71,3 +71,9 @@ async function getData(){
     }
 }
 
+
+// hkirat code on axios - external library 
+
+// coding using axios for backend
+
+
