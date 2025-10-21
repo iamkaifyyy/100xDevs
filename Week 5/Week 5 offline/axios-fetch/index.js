@@ -29,7 +29,6 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
         console.error("error", error);
     });
 
-
 // using Axios - external Library way
 
 import axios from "axios";
@@ -41,7 +40,6 @@ axios.get("https://jsonplaceholder.typicode.com/posts/1")
     .catch(error => {
         console.error("Error", error)
     })
-
 
 // using fetch with Async function
 
@@ -57,7 +55,6 @@ async function getData() {
 
 getData();
 
-
 // using Axios as with Async-Await Syntax
 
 import axios from "axios"
@@ -71,9 +68,8 @@ async function getData(){
     }
 }
 
-
 // hkirat code on axios - external library 
-
 // coding using axios for backend
+
 
 
