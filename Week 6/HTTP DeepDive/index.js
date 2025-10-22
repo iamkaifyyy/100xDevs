@@ -1,6 +1,7 @@
 // this video is for http deep dive - Authentication 
 
-const express = require("express")
+const express = require("express");
+const { unstable_ViewTransition } = require("react");
 
 const app = express();
 app.use(express.json());
@@ -68,6 +69,21 @@ app.post("/signin", function(req, res){
 })
 
 
+// creating an authenticated EP 
+ app.get("/me", (req, res){
+    const token = req.headers.authorization;
+    const user = users.find(user => user.token === token);
+    if(user){
+        res.send({
+            username: user.username
+        })
+    } else {
+        res.status(401).send({
+            message: "Unauthorized"
+        })
+    }
+ })
+
+
 
 app.listen(3000); // tht the http server is listening on port 3000
-
