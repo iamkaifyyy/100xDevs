@@ -64,6 +64,32 @@ app.post("/signin", (req, res) => {
   }
 });
 
+app.get("/me", function(res, res){
+  const token = req.headers.token;
+  let  foundUser = token;
+
+  for (let i = 0; i < users.length; i++) {
+    if(users[i].token == token) {
+      foundUser = users[i]
+    }
+    
+  }
+
+  if(foundUser) {
+    res.json({
+      username: foundUser.username,
+      password: foundUser.password
+    })
+  } else {
+    res.json({
+      message: "Sorry Invalid token"
+    })
+  }
+
+})
+
+
+
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });
