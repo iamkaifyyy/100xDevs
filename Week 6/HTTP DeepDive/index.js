@@ -6,13 +6,27 @@ app.use("express.json");
 const users = [];
 
 app.post("/signup", function(req, res){
+    // input Validation
+    const username = req.body.username;
+    const password = req.body.password;
 
+    
+
+    users.push({
+        username: username,
+        password: password
+    });
+
+    res.json({
+        message: "Youre Signed in"
+    })
 })
+
+
 
 app.post("/signin", function(req, res){
     
-})
-
+});
 
 app.listen(3000);E
 
