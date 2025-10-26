@@ -18,7 +18,6 @@
             });
             alert("You are signed up!")
         }
-
         async function signin(){
             const username = document.getElementById("signin-username").value;
 
@@ -31,6 +30,19 @@
             localStorage.setItem("token", response.data.token);
 
             alert("You are signed in !")
+        }
+        async function getUserInformation() {
+            const response = await axios.get("http://localhost:3000/me",{
+                Headers: {
+                    token: localStorage.getItem("token")
+                }
+            });   
+            document.getElementById("information").innerHTML = "username" + response.data.username + "password" + response.data.password     
+        }
+        getUserInformation();
+
+        function logout(){
+            localStorage.removeItem("token");
         }
     </script>
 </head>
