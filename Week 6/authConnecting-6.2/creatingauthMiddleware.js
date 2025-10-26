@@ -61,6 +61,11 @@ function auth(req, res, next){
     }
 }
 
+function logger(req, res, next){
+    console.log(req.method + "request came");
+    next();
+}
+
 app.get("/me", auth,  function(req, res){
   const token = req.headers.token; 
 
