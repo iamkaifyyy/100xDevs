@@ -9,6 +9,11 @@ const app = express();
 
 const users = [];
 
+function logger(req, res, next){
+    console.log(req.method + "request came");
+    next();
+}
+
 app.post("/signup", function(req, res){
   const username = req.body.username
   const password = req.body.password
@@ -61,10 +66,6 @@ function auth(req, res, next){
     }
 }
 
-function logger(req, res, next){
-    console.log(req.method + "request came");
-    next();
-}
 
 app.get("/me", auth,  function(req, res){
   const token = req.headers.token; 
