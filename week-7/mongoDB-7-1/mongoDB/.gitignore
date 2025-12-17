@@ -1,0 +1,74 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files (macOS)
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Build output
+dist/
+build/
+out/
+tmp/
+temp/
+
+# Coverage directory
+coverage/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# TypeScript
+*.tsbuildinfo
+
+# VS Code settings
+.vscode/
+.history/
+
+# Next.js / React builds
+.next/
+.vercel/
+*.cache/
+.cache/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Serverless
+.serverless/
+
+# MongoDB dump
+dump/
+
+# Local databases
+*.sqlite
+*.db
+
+# Logs from PM2
+.pm2/logs/
+
+# Misc
+*.pid
+*.seed
+*.tgz
+
+# Ignore compiled Java (if any)
+*.class
